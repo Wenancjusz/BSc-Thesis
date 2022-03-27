@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_change_password"
+        android:orderInCategory="100"
+        android:title="Zmień hasło"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_edit"
+        android:orderInCategory="100"
+        android:title="Edytuj dane"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_signOut"
+        android:orderInCategory="100"
+        android:title="Wyloguj się"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_deleteAccount"
+        android:orderInCategory="100"
+        android:title="Usuń konto"
+        app:showAsAction="never"/>
+
+</menu>

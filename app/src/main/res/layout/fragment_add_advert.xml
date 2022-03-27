@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".adverts.AddingAdvertFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/departureTimeTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/leavingHour"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/departureTimeETAdd"
+                app:layout_constraintEnd_toStartOf="@+id/departureTimeETAdd"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/departureTimeETAdd"
+                app:layout_constraintVertical_bias="0.428" />
+
+            <EditText
+                android:id="@+id/arrivalET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edittext_to_edittext_margin"
+                android:background="@drawable/edit_text_bg"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColorHint="@color/hintColor"
+                app:layout_constraintEnd_toEndOf="@+id/departureET"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/departureET"
+                app:layout_constraintTop_toBottomOf="@+id/departureET"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:text="@tools:sample/cities"
+                android:textColor="@color/textColor"/>
+
+            <EditText
+                android:id="@+id/dateDepartureET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edittext_to_edittext_margin"
+                android:background="@drawable/edit_text_bg"
+                android:ems="10"
+                android:enabled="true"
+                android:focusable="false"
+                android:inputType="date"
+                android:minHeight="48dp"
+                android:textColorHint="@color/hintColor"
+                app:layout_constraintEnd_toEndOf="@+id/departureTimeETAdd"
+                app:layout_constraintStart_toStartOf="@+id/departureTimeETAdd"
+                app:layout_constraintTop_toBottomOf="@+id/departureTimeETAdd"
+                tools:ignore="Deprecated,SpeakableTextPresentCheck"
+                tools:text="@tools:sample/date/ddmmyy"
+                android:textColor="@color/textColor"/>
+
+            <EditText
+                android:id="@+id/departureTimeETAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_banner_margin"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_bg"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="date"
+                android:minHeight="48dp"
+                android:textColorHint="@color/hintColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="Deprecated,SpeakableTextPresentCheck"
+                tools:text="@tools:sample/date/hhmm"
+                android:textColor="@color/textColor"/>
+
+            <TextView
+                android:id="@+id/seatsTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/seatsNumber"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/passengersET"
+                app:layout_constraintEnd_toStartOf="@+id/passengersET"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/adapterPrice"
+                app:layout_constraintTop_toTopOf="@+id/passengersET"
+                app:layout_constraintVertical_bias="0.523" />
+
+            <EditText
+                android:id="@+id/passengersET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edittext_to_edittext_margin"
+                android:ems="10"
+                android:inputType="number"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="@+id/priceET"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/priceET"
+                app:layout_constraintTop_toBottomOf="@+id/priceET"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:textColorHint="@color/hintColor"
+                android:background="@drawable/edit_text_bg"
+                android:textColor="@color/textColor"/>
+
+            <Button
+                android:id="@+id/cancelBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/bottom_margin"
+                android:text="@string/cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/addBTN"
+                app:layout_constraintHorizontal_bias="0.746"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/addBTN" />
+
+            <Button
+                android:id="@+id/addBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_to_button_margin"
+                android:text="@string/add"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cancelBTN"
+                app:layout_constraintTop_toBottomOf="@+id/passengersET" />
+
+            <EditText
+                android:id="@+id/departureET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edittext_to_edittext_margin"
+                android:background="@drawable/edit_text_bg"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColorHint="@color/hintColor"
+                app:layout_constraintEnd_toEndOf="@+id/dateDepartureET"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/dateDepartureET"
+                app:layout_constraintTop_toBottomOf="@+id/dateDepartureET"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:text="@tools:sample/cities"
+                android:textColor="@color/textColor"/>
+
+            <TextView
+                android:id="@+id/departureDateTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/leavingDate"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/dateDepartureET"
+                app:layout_constraintEnd_toStartOf="@+id/dateDepartureET"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/departureTimeTV"
+                app:layout_constraintTop_toTopOf="@+id/dateDepartureET"
+                app:layout_constraintVertical_bias="0.476" />
+
+            <TextView
+                android:id="@+id/departureCityTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/leavingCity"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/departureET"
+                app:layout_constraintEnd_toStartOf="@+id/departureET"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/departureDateTV"
+                app:layout_constraintTop_toTopOf="@+id/departureET"
+                app:layout_constraintVertical_bias="0.38" />
+
+            <TextView
+                android:id="@+id/arrivalCityTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/destination"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/arrivalET"
+                app:layout_constraintEnd_toStartOf="@+id/arrivalET"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/departureCityTV"
+                app:layout_constraintTop_toTopOf="@+id/arrivalET"
+                app:layout_constraintVertical_bias="0.476" />
+
+            <TextView
+                android:id="@+id/adapterPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/price"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/priceET"
+                app:layout_constraintEnd_toStartOf="@+id/priceET"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/arrivalCityTV"
+                app:layout_constraintTop_toTopOf="@+id/priceET"
+                app:layout_constraintVertical_bias="0.619" />
+
+            <EditText
+                android:id="@+id/priceET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edittext_to_edittext_margin"
+                android:background="@drawable/edit_text_bg"
+                android:ems="10"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textColorHint="@color/hintColor"
+                app:layout_constraintEnd_toEndOf="@+id/arrivalET"
+                app:layout_constraintStart_toStartOf="@+id/arrivalET"
+                app:layout_constraintTop_toBottomOf="@+id/arrivalET"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:text="@tools:sample/us_zipcodes"
+                android:textColor="@color/textColor"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

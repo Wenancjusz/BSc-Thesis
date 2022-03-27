@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".account.AccountFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/account_bold_layout_start_margin"
+                android:layout_marginTop="20dp"
+                android:text="Dane użytkownika"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/loginTV"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/account_layout_start_margin"
+                android:layout_marginTop="@dimen/space_between_data_top_margin"
+                android:text="Nazwa użytkownika: "
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/nameTV"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_data_top_margin"
+                android:text="Imię: "
+                app:layout_constraintStart_toStartOf="@+id/loginTV"
+                app:layout_constraintTop_toBottomOf="@+id/loginTV" />
+
+            <TextView
+                android:id="@+id/emailTV"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_data_top_margin"
+                android:text="E-mail: "
+                app:layout_constraintStart_toStartOf="@+id/nameTV"
+                app:layout_constraintTop_toBottomOf="@+id/nameTV" />
+
+            <TextView
+                android:id="@+id/phoneTV"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Numer telefonu: "
+                app:layout_constraintStart_toStartOf="@+id/emailTV"
+                app:layout_constraintTop_toBottomOf="@+id/emailTV" />
+
+            <Button
+                android:id="@+id/editAccountBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Edytuj swoje dane"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneTV"
+                tools:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Informacje o pojeździe"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/editAccountBTN"
+                tools:visibility="gone" />
+
+            <TextView
+                android:id="@+id/brandTV"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/account_layout_start_margin"
+                android:layout_marginTop="@dimen/space_between_data_top_margin"
+                android:text="Marka: "
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                tools:visibility="gone" />
+
+            <TextView
+                android:id="@+id/modelTV"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_data_top_margin"
+                android:text="Model: "
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/brandTV"
+                app:layout_constraintTop_toBottomOf="@+id/brandTV"
+                tools:visibility="gone" />
+
+            <TextView
+                android:id="@+id/carTypeTV"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_data_top_margin"
+                android:text="Typ samochodu: "
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/modelTV"
+                app:layout_constraintTop_toBottomOf="@+id/modelTV"
+                tools:visibility="gone" />
+
+            <TextView
+                android:id="@+id/carColorTV"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_data_top_margin"
+                android:text="Kolor: "
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/carTypeTV"
+                app:layout_constraintTop_toBottomOf="@+id/carTypeTV"
+                tools:visibility="gone" />
+
+            <Button
+                android:id="@+id/editCarBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_to_button_margin"
+                android:text="Edytuj dane pojazdu"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@id/deleteCarBTN"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/carColorTV"
+                tools:visibility="gone" />
+
+            <Button
+                android:id="@+id/deleteCarBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:text="Usuń pojazd"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/editCarBTN"
+                app:layout_constraintTop_toBottomOf="@+id/carColorTV"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Statystyki przejazdów"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/editCarBTN" />
+
+            <TextView
+                android:id="@+id/tripsTravelledTV"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/account_layout_start_margin"
+                android:layout_marginTop="@dimen/space_between_data_top_margin"
+                android:text="Liczba odbytych przejazdów: "
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/distanceTravelledTV"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_data_top_margin"
+                android:text="Przejechany dystans: "
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/tripsTravelledTV"
+                app:layout_constraintTop_toBottomOf="@+id/tripsTravelledTV" />
+
+            <TextView
+                android:id="@+id/driverRatingTV"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_data_top_margin"
+                android:text="Średnia ocena: "
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/distanceTravelledTV"
+                app:layout_constraintTop_toBottomOf="@+id/distanceTravelledTV" />
+
+            <Button
+                android:id="@+id/addBTN"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:text="Dodaj ogłoszenie"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/searchBTN"
+                app:layout_constraintTop_toTopOf="@+id/searchBTN" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

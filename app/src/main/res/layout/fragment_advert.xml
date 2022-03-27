@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adverts.AdvertFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="263dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                app:layout_constraintBottom_toTopOf="@id/tripTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.623"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/tripTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Trasa"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/carTV"
+                app:layout_constraintStart_toStartOf="@+id/mapView"
+                app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+
+            <TextView
+                android:id="@+id/leavingCity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="@string/leavingCity"
+                app:layout_constraintEnd_toEndOf="@+id/tripTV"
+                app:layout_constraintStart_toStartOf="@+id/tripTV"
+                app:layout_constraintTop_toBottomOf="@+id/tripTV" />
+
+            <TextView
+                android:id="@+id/destinationTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="@string/destination"
+                app:layout_constraintEnd_toEndOf="@+id/leavingCity"
+                app:layout_constraintStart_toStartOf="@+id/leavingCity"
+                app:layout_constraintTop_toBottomOf="@+id/leavingCity" />
+
+            <TextView
+                android:id="@+id/dateTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="@string/leavingDate"
+                app:layout_constraintEnd_toEndOf="@+id/destinationTV"
+                app:layout_constraintStart_toStartOf="@+id/destinationTV"
+                app:layout_constraintTop_toBottomOf="@+id/destinationTV" />
+
+            <TextView
+                android:id="@+id/timeTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="@string/leavingHour"
+                app:layout_constraintEnd_toStartOf="@+id/carColorTV"
+                app:layout_constraintStart_toStartOf="@+id/dateTV"
+                app:layout_constraintTop_toBottomOf="@+id/dateTV" />
+
+            <TextView
+                android:id="@+id/priceTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="@string/price"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/timeTV"
+                app:layout_constraintTop_toBottomOf="@+id/timeTV" />
+
+
+            <TextView
+                android:id="@+id/carTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="Samochód"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/mapView"
+                app:layout_constraintTop_toTopOf="@+id/tripTV" />
+
+
+            <TextView
+                android:id="@+id/brandTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="Marka: "
+                app:layout_constraintEnd_toEndOf="@+id/mapView"
+                app:layout_constraintStart_toStartOf="@+id/carTV"
+                app:layout_constraintTop_toBottomOf="@+id/carTV" />
+
+            <TextView
+                android:id="@+id/modelTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="Model: "
+                app:layout_constraintEnd_toEndOf="@+id/brandTV"
+                app:layout_constraintStart_toStartOf="@+id/brandTV"
+                app:layout_constraintTop_toBottomOf="@+id/brandTV" />
+
+
+            <TextView
+                android:id="@+id/seatsTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="Wolne miejsca: "
+                app:layout_constraintEnd_toEndOf="@+id/mapView"
+                app:layout_constraintStart_toStartOf="@+id/modelTV"
+                app:layout_constraintTop_toBottomOf="@+id/modelTV" />
+
+            <TextView
+                android:id="@+id/carColorTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="Kolor: "
+                app:layout_constraintEnd_toEndOf="@+id/seatsTV"
+                app:layout_constraintStart_toStartOf="@+id/seatsTV"
+                app:layout_constraintTop_toBottomOf="@+id/seatsTV" />
+
+
+            <TextView
+                android:id="@+id/typeTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="Typ: "
+                app:layout_constraintEnd_toEndOf="@+id/carColorTV"
+                app:layout_constraintStart_toStartOf="@+id/carColorTV"
+                app:layout_constraintTop_toBottomOf="@+id/carColorTV" />
+
+
+            <TextView
+                android:id="@+id/driverTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Kierowca"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/mapView"
+                app:layout_constraintTop_toBottomOf="@+id/priceTV" />
+
+
+            <TextView
+                android:id="@+id/driverNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="Kierowca: "
+                app:layout_constraintEnd_toEndOf="@+id/driverTV"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/driverTV"
+                app:layout_constraintTop_toBottomOf="@+id/driverTV" />
+
+            <Button
+                android:id="@+id/contactBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_to_button_margin"
+                android:layout_marginBottom="@dimen/bottom_margin"
+                android:text="Kontakt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/driverNameTV" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

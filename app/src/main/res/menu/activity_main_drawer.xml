@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_filters"
+            android:icon="@android:drawable/ic_menu_search"
+            android:title="Wyszukaj ogłoszenie" />
+        <item
+            android:id="@+id/nav_add_advert"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Dodaj ogłoszenie" />
+        <item
+            android:id="@+id/nav_my_adverts"
+            android:icon="@drawable/ic_my_opinion"
+            android:title="Moje ogłoszenia" />
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="Moje konto" />
+
+    </group>
+</menu>

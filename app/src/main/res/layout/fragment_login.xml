@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/loginTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logowanie"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.32" />
+
+            <EditText
+                android:id="@+id/emailTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/startEndMargin"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="@dimen/startEndMargin"
+                android:background="@drawable/edit_text_bg"
+                android:hint="@string/e_mail"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:paddingStart="@dimen/padding_start"
+                android:paddingEnd="5dp"
+                android:selectAllOnFocus="true"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginTV" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/InputLayoutPasswordET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/emailTV"
+                app:layout_constraintStart_toStartOf="@+id/emailTV"
+                app:layout_constraintTop_toBottomOf="@+id/emailTV"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/passwordET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:ems="10"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:minHeight="48dp"
+                    android:padding="@dimen/padding_start"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/hintColor"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/signInBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Zaloguj"
+                app:layout_constraintEnd_toEndOf="@+id/InputLayoutPasswordET"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="@+id/InputLayoutPasswordET"
+                app:layout_constraintTop_toBottomOf="@+id/InputLayoutPasswordET" />
+
+            <Button
+                android:id="@+id/fPasswordBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Zapomniałem Hasła"
+                app:layout_constraintEnd_toEndOf="@+id/signInBTN"
+                app:layout_constraintStart_toStartOf="@+id/signInBTN"
+                app:layout_constraintTop_toBottomOf="@+id/signInBTN" />
+
+            <TextView
+                android:id="@+id/hasAccountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nie masz jeszcze konta?"
+                app:layout_constraintBottom_toBottomOf="@+id/loginTextView"
+                app:layout_constraintEnd_toStartOf="@+id/loginTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/loginTextView" />
+
+            <TextView
+                android:id="@+id/loginTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="25dp"
+                android:text="Zarejestruj się"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/hasAccountTV"
+                app:layout_constraintTop_toBottomOf="@+id/fPasswordBTN"
+                app:layout_goneMarginBottom="@dimen/bottom_margin" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

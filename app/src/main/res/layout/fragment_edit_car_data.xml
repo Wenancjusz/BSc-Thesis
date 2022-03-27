@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".account.EditCarDataFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck">>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">>
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Marka"
+                android:textSize="20sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/brandET"
+                app:layout_constraintEnd_toStartOf="@+id/brandET"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/brandET"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/edit_text_bg"
+                android:ems="10"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textColorHint="@color/hintColor"
+                app:layout_constraintBottom_toTopOf="@+id/modelET"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:text="@tools:sample/cities"
+                android:textColor="@color/textColor"/>
+
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:text="Model"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/modelET"
+                app:layout_constraintEnd_toStartOf="@+id/modelET"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/modelET"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/edit_text_bg"
+                android:ems="10"
+                android:textColor="@color/textColor"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textColorHint="@color/hintColor"
+                app:layout_constraintBottom_toTopOf="@+id/carColorET"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/brandET"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:text="@tools:sample/lorem" />
+
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:text="Kolor"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/carColorET"
+                app:layout_constraintEnd_toStartOf="@+id/carColorET"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/carColorET"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/edit_text_bg"
+                android:ems="10"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textColorHint="@color/hintColor"
+                app:layout_constraintBottom_toTopOf="@+id/carTypeET"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/modelET"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:text="@tools:sample/date/mmddyy"
+                android:textColor="@color/textColor"/>
+
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Typ"
+                android:textSize="20sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/carTypeET"
+                app:layout_constraintEnd_toStartOf="@+id/carTypeET"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="DuplicateIds" />
+
+            <Spinner
+                android:id="@+id/carTypeET"
+                android:layout_width="220dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="@dimen/text_to_button_margin"
+                android:background="@drawable/edit_text_bg"
+                android:entries="@array/car_types"
+                android:minHeight="48dp"
+                android:textColorHint="@color/hintColor"
+                app:layout_constraintBottom_toTopOf="@+id/cancelBTN"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/carColorET" />
+
+
+            <Button
+                android:id="@+id/cancelBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="@dimen/bottom_margin"
+                android:text="Anuluj"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/saveBTN"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/carTypeET" />
+
+            <Button
+                android:id="@+id/saveBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zapisz"
+                app:layout_constraintBottom_toBottomOf="@+id/cancelBTN"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cancelBTN"
+                app:layout_constraintTop_toTopOf="@+id/cancelBTN" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>
