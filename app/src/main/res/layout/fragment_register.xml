@@ -11,21 +11,20 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal">
 
             <TextView
                 android:id="@+id/registerTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:text="Rejestracja"
                 android:textSize="34sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/editTextLogin"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.076" />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
                 android:id="@+id/editTextLogin"
@@ -34,6 +33,7 @@
                 android:layout_marginStart="@dimen/startEndMargin"
                 android:layout_marginTop="36dp"
                 android:layout_marginEnd="@dimen/startEndMargin"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/edit_text_bg"
                 android:ems="10"
                 android:hint="Login"
@@ -42,27 +42,28 @@
                 android:padding="@dimen/padding_start"
                 android:textColor="@color/textColor"
                 android:textColorHint="@color/hintColor"
+                app:layout_constraintBottom_toTopOf="@+id/InputLayoutPassword"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/registerTV" />
+                app:layout_constraintStart_toStartOf="parent" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/InputLayoutPassword"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="@+id/editTextLogin"
-                app:layout_constraintStart_toStartOf="@+id/editTextLogin"
-                app:layout_constraintTop_toBottomOf="@+id/editTextLogin"
-                app:passwordToggleEnabled="true"
                 app:boxStrokeWidth="0dp"
                 app:boxStrokeWidthFocused="0dp"
-                app:hintEnabled="false">
+                app:hintEnabled="false"
+                app:layout_constraintBottom_toTopOf="@+id/InputLayoutConfirmPassword"
+                app:layout_constraintEnd_toEndOf="@+id/editTextLogin"
+                app:layout_constraintStart_toStartOf="@+id/editTextLogin"
+                app:passwordToggleEnabled="true">
 
                 <EditText
                     android:id="@+id/editTextPassword"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edit_text_bg"
                     android:ems="10"
                     android:hint="Hasło"
@@ -79,19 +80,19 @@
                 android:id="@+id/InputLayoutConfirmPassword"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false"
+                app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
                 app:layout_constraintEnd_toEndOf="@+id/InputLayoutPassword"
                 app:layout_constraintStart_toStartOf="@+id/InputLayoutPassword"
-                app:layout_constraintTop_toBottomOf="@+id/InputLayoutPassword"
-                app:passwordToggleEnabled="true"
-                app:boxStrokeWidth="0dp"
-                app:hintEnabled="false"
-                app:boxStrokeWidthFocused="0dp">
+                app:passwordToggleEnabled="true">
 
                 <EditText
                     android:id="@+id/editTextConfirmPassword"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/edit_text_bg"
                     android:ems="10"
                     android:hint="@string/confirmPassword"
@@ -106,11 +107,12 @@
                     tools:ignore="SpeakableTextPresentCheck" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <EditText
                 android:id="@+id/editTextEmail"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/edit_text_bg"
                 android:ems="10"
                 android:hint="E-mail"
@@ -119,9 +121,12 @@
                 android:padding="@dimen/padding_start"
                 android:textColor="@color/textColor"
                 android:textColorHint="@color/hintColor"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/InputLayoutConfirmPassword"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/InputLayoutConfirmPassword"
-                app:layout_constraintTop_toBottomOf="@+id/InputLayoutConfirmPassword" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.495" />
 
             <EditText
                 android:id="@+id/editTextName"

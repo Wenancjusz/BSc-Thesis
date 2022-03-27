@@ -147,18 +147,4 @@ public class LoginFragment extends Fragment {
                         }
                 });
     }
-
-    @Override
-    public void onConfigurationChanged(@NonNull Configuration newConfig) {
-        ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) loginTV.getLayoutParams();
-
-        if(newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            params.verticalBias = 0.045f;
-        }
-        else {
-            params.verticalBias = 0.32f;
-        }
-        loginTV.setLayoutParams(params);
-        super.onConfigurationChanged(newConfig);
-    }
 }
